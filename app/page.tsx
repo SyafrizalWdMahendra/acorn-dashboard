@@ -2,9 +2,30 @@
 
 import SidebarItem from "./dashboard/_components/sidebar";
 import AppBar from "./dashboard/_components/app-bar";
-import { Circle, Download, Menu, MenuIcon, MenuSquareIcon, Plus, Search, Settings, Settings2, SlidersHorizontal, Upload } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronsDown,
+  ChevronsUp,
+  Circle,
+  DollarSign,
+  Download,
+  Menu,
+  MenuIcon,
+  MenuSquareIcon,
+  Plus,
+  Radio,
+  Search,
+  Settings,
+  Settings2,
+  SlidersHorizontal,
+  SwitchCameraIcon,
+  ToggleRight,
+  Upload,
+} from "lucide-react";
 import UserAvatar from "./dashboard/_components/user-avatar";
 import Image from "next/image";
+import Header from "./dashboard/_components/header";
+import Contents from "./dashboard/_components/contents";
 
 export default function Dashboard() {
   // return (
@@ -404,83 +425,8 @@ export default function Dashboard() {
       <AppBar />
       <SidebarItem />
       <main className="w-full flex flex-col gap-4">
-        <header className="flex justify-between">
-          <div className="relative w-1/3 text-gray-500 h-full">
-            <Search
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
-              size={20}
-            />
-            <input
-              type="text"
-              placeholder='Try searching "insights"'
-              className="w-full bg-white pl-12 pr-4 py-3 rounded-full text-sm outline-none focus:ring-2 focus:ring-slate-100"
-            />
-          </div>
-          <div className="flex w-1/8 justify-between">
-            <button className="flex bg-white rounded-full text-sm outline-none px-2 pl-3 py-1 items-center gap-2 text-black hover:cursor-pointer">
-              <MenuIcon size={20} />
-              <UserAvatar src="https://i.pravatar.cc/150?u=eren" alt="Eren" />
-            </button>
-            <div className="p-2.5 rounded-full bg-rose-700 w-max h-max flex text-center">
-              <Plus color="white" size={25} />
-            </div>
-          </div>
-        </header>
-        <div className="bg-white w-full rounded-3xl h-dvh">
-          <div className="flex rounded-3xl p-6 items-center gap-3 justify-between">
-            <div className="flex rounded-3xl items-center gap-3">
-              <div className="p-1.5 rounded-full bg-white border border-gray-300 w-max h-max flex text-center">
-                <Plus color="gray" size={20} />
-              </div>
-              <div className="p-1 rounded-full bg-white border border-gray-300 w-max h-max flex text-center items-center gap-2">
-                <Image
-                  src="https://i.pravatar.cc/150?u=eren"
-                  width={30}
-                  height={30}
-                  alt="Eren"
-                  className="rounded-full object-cover border-2 border-white"
-                />
-                <span className="text-sm font-bold text-black">Armin A.</span>
-              </div>
-              <div className="p-1 rounded-full bg-white border border-gray-300 w-max h-max flex text-center items-center gap-2">
-                <Image
-                  src="https://i.pravatar.cc/150?u=eren"
-                  width={30}
-                  height={30}
-                  alt="Eren"
-                  className="rounded-full object-cover border-2 border-white"
-                />
-                <span className="text-sm font-bold text-black">Armin A.</span>
-              </div>
-              <div className="p-1 rounded-full bg-white border border-gray-300 w-max h-max flex text-center items-center gap-2">
-                <Image
-                  src="https://i.pravatar.cc/150?u=eren"
-                  width={30}
-                  height={30}
-                  alt="Eren"
-                  className="rounded-full object-cover border-2 border-white"
-                />
-                <span className="text-sm font-bold text-black">Armin A.</span>
-              </div>
-              <div className="p-1 rounded-full bg-white border border-gray-300 w-max h-max flex text-center">
-                <div className="rounded-full bg-black p-1">
-                  <Circle color="white" width={22} height={22} />
-                </div>
-              </div>
-            </div>
-            <div className="flex rounded-3xl items-center gap-3">
-              <div className="p-1.5 rounded-full bg-white border border-gray-300 w-max h-max flex text-center">
-                <Settings2 color="gray" size={20} />
-              </div>
-              <div className="p-1.5 rounded-full bg-white border border-gray-300 w-max h-max flex text-center">
-                <Download color="gray" size={20} />
-              </div>
-              <div className="p-1.5 rounded-full bg-white border border-gray-300 w-max h-max flex text-center">
-                <Upload color="gray" size={20} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Header />
+        <Contents />
       </main>
     </div>
   );
