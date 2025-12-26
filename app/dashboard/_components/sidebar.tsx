@@ -4,7 +4,7 @@ import { dashboardSections, reportsSections } from "../lib/sidebar-data";
 
 export default function SidebarItem() {
   return (
-    <nav className="flex flex-col w-64 p-5 py-2 min-h-screen">
+    <nav className="flex flex-col w-64 py-2 pl-3 min-h-screen">
       <div className="flex items-center mb-8 gap-1">
         <span className="font-bold">Codename.com</span>
         <ChevronDown className="w-4 h-4 text-slate-500" />
@@ -20,7 +20,7 @@ export default function SidebarItem() {
           <span>Recent</span>
         </div>
         <div className="text-sm font-semibold">
-          <span>Sales List</span>
+          <span>Sales list</span>
         </div>
         <div className="text-sm font-semibold">
           <span>Goals</span>

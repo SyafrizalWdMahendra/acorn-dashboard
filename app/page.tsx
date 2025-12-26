@@ -421,7 +421,7 @@ export default function Dashboard() {
   // );
 
   return (
-    <div className="flex h-dvh bg-[#f5eded] text-black px-4 py-5 gap-6">
+    <div className="flex h-dvh bg-[#f7f0f0] text-black px-4 py-5 gap-6">
       <AppBar />
       <SidebarItem />
       <main className="w-full flex flex-col gap-4">

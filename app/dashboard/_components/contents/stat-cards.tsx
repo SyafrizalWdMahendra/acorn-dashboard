@@ -16,7 +16,7 @@ export const StatCard = ({
     <span className="text-[10px] font-semibold">{title}</span>
     <div
       className={`rounded-full px-2.5 py-0.5 ${
-        isHighlighted ? "bg-rose-700" : "bg-[#cfcfcf]"
+        isHighlighted ? "bg-rose-700" : "bg-[#c1c1c1]"
       }`}
     >
       <span

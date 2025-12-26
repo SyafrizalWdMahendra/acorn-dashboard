@@ -12,6 +12,7 @@ import { UserBadge } from "./contents/user-badge";
 import { IconButton } from "./contents/icon-button";
 import { StatCard } from "./contents/stat-cards";
 import { stats, users } from "../lib/content-data";
+import StatBars from "./contents/stat-bars";
 
 export default function Contents() {
   return (
@@ -29,6 +30,7 @@ export default function Contents() {
 
           <IconButton icon={Circle} filled={true} />
         </div>
+
         <div className="flex rounded-3xl items-center gap-3">
           <IconButton icon={Settings2} />
           <IconButton icon={Download} />
@@ -38,7 +40,7 @@ export default function Contents() {
 
       {/* Row 2 */}
       <div className="flex p-6 py-1 justify-between">
-        <span className="font-semibold text-3xl text-[#cfcfcf]">
+        <span className="font-semibold text-3xl text-[#c1c1c1]">
           New report
         </span>
         <div className="flex gap-4 items-center">
@@ -46,7 +48,7 @@ export default function Contents() {
             <ToggleRight />
             <span className="font-semibold text-sm">Timeframe</span>
           </div>
-          <div className="flex bg-[#ececec] text-black px-4 py-1 rounded-full text-sm items-center gap-2">
+          <div className="flex bg-[#f2f2f2] text-black px-4 py-1 rounded-full text-sm items-center gap-2">
             <span>Sep 1 - Nov 30, 2023</span>
             <ChevronDown className="w-4 h-4" />
           </div>
@@ -60,7 +62,7 @@ export default function Contents() {
           <div className="flex items-center mb-3 gap-2">
             <div className="flex items-end">
               <span className="text-3xl lg:text-3xl font-bold">$528,976</span>
-              <span className="text-[#cfcfcf] text-3xl lg:text-3xl font-bold">
+              <span className="text-[#c1c1c1] text-3xl lg:text-3xl font-bold">
                 .82
               </span>
             </div>
@@ -94,7 +96,7 @@ export default function Contents() {
               <div className="flex items-center gap-1.5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://ui-avatars.com/api/?name=Mikasa&background=3b82f6&color=fff"
+                  src="https://i.pravatar.cc"
                   alt="Mikasa"
                   className="w-6 h-6 rounded-full"
                 />
@@ -171,6 +173,11 @@ export default function Contents() {
             />
           ))}
         </div>
+      </div>
+
+      {/* Row 4 */}
+      <div className="flex p-6 py-0 flex-wrap w-full gap-2.5">
+        <StatBars />
       </div>
     </div>
   );
