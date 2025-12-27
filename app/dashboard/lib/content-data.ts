@@ -28,4 +28,49 @@ const stats = [
   },
 ];
 
-export { users, stats };
+const platformBars = [
+  {
+    icon: "🅱️",
+    name: "Behance",
+    value: "$89,935",
+    percentage: 11,
+    height: "h-24",
+  },
+  {
+    icon: "🏀",
+    name: "Dribbble",
+    value: "$227,459",
+    percentage: 43,
+    height: "h-32",
+  },
+  {
+    icon: "🔍",
+    name: "Google",
+    value: "$37,028",
+    percentage: 7,
+    height: "h-20",
+  },
+  {
+    icon: "📷",
+    name: "Instagram",
+    value: "$142,823",
+    percentage: 27,
+    height: "h-14",
+  },
+  {
+    icon: "👜",
+    name: "Shopping",
+    value: "$0",
+    percentage: 30,
+    height: "h-26",
+  },
+];
+
+const platforms = [
+  { icon: "🏀", name: "Dribbble", value: "$227,459", percentage: 43 },
+  { icon: "📷", name: "Instagram", value: "$142,823", percentage: 27 },
+  { icon: "🅱️", name: "Behance", value: "$89,935", percentage: 11 },
+  { icon: "🔍", name: "Google", value: "$37,028", percentage: 7 },
+];
+
+export { users, stats, platformBars, platforms };

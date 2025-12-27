@@ -13,10 +13,13 @@ import { IconButton } from "./contents/icon-button";
 import { StatCard } from "./contents/stat-cards";
 import { stats, users } from "../lib/content-data";
 import StatBars from "./contents/stat-bars";
+import { PlatformList } from "./contents/platform-list";
+import { DealsByCategory } from "./contents/deals-by-category";
+import { SalesDynamic } from "./contents/sales-dynamic";
 
 export default function Contents() {
   return (
-    <div className="bg-white w-full rounded-3xl h-dvh">
+    <div className="bg-white w-full rounded-3xl h-dvh overflow-y-scroll">
       {/* Row 1 */}
       <div className="flex rounded-3xl p-6 items-center gap-3 justify-between">
         <div className="flex rounded-3xl items-center gap-3">
@@ -40,7 +43,7 @@ export default function Contents() {
 
       {/* Row 2 */}
       <div className="flex p-6 py-1 justify-between">
-        <span className="font-semibold text-3xl text-[#c1c1c1]">
+        <span className="font-semibold text-3xl text-secondary">
           New report
         </span>
         <div className="flex gap-4 items-center">
@@ -62,7 +65,7 @@ export default function Contents() {
           <div className="flex items-center mb-3 gap-2">
             <div className="flex items-end">
               <span className="text-3xl lg:text-3xl font-bold">$528,976</span>
-              <span className="text-[#c1c1c1] text-3xl lg:text-3xl font-bold">
+              <span className="text-secondary text-3xl lg:text-3xl font-bold">
                 .82
               </span>
             </div>
@@ -76,25 +79,23 @@ export default function Contents() {
               </div>
             </div>
           </div>
-          <div className="flex gap-2 text-xs font-bold text-gray-700">
-            <span className="text-[10px]">vs prev. $501,641.73</span>
-            <span className="text-[10px] flex items-center -mt-0.5 gap-0.5">
+          <div className="flex justify-between font-bold text-gray-700 items-center">
+            <span className="text-[11.5px]">vs prev. $501,641.73</span>
+            <div className="text-[11.5px] flex items-center gap-0.5">
               <span>Jun 1 - Aug 31, 2023</span>{" "}
               <ChevronDown className="w-4 h-4" />
-            </span>
+            </div>
           </div>
         </div>
 
         <div className="flex gap-3 w-3/5 ml-auto">
-          {/* Top Sales Card (Masih manual karena struktur beda sendiri) */}
-          <div className="bg-white rounded-xl h-max px-3 py-2 w-full sm:w-44 lg:w-48 border border-[#ececec] ml-7.5">
+          <div className="bg-white rounded-xl h-max px-3 py-2 w-full sm:w-44 lg:w-48 border border-border ml-2.5">
             <h3 className="text-gray-400 text-[10px] font-medium mb-1.5">
               Top sales
             </h3>
             <div className="text-xl font-bold mb-2">72</div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://i.pravatar.cc"
                   alt="Mikasa"
@@ -120,7 +121,6 @@ export default function Contents() {
             </div>
           </div>
 
-          {/* Best Deal Card (Manual karena dark theme & layout khusus) */}
           <div className="bg-gray-900 rounded-xl h-max px-3 py-2 w-full sm:w-44 lg:w-48 shadow-sm mr-1">
             <div className="flex justify-between items-start mb-1.5">
               <h3 className="text-gray-400 text-[10px] font-medium">
@@ -161,7 +161,6 @@ export default function Contents() {
             </div>
           </div>
 
-          {/* Reusable Stat Cards */}
           {stats.map((stat, index) => (
             <StatCard
               key={index}
@@ -178,6 +177,21 @@ export default function Contents() {
       {/* Row 4 */}
       <div className="flex p-6 py-0 flex-wrap w-full gap-2.5">
         <StatBars />
+      </div>
+
+      {/* Row 5 */}
+      <div className="grid grid-cols-12 gap-2 p-6">
+        <div className="col-span-3 space-y-2">
+          <PlatformList />
+        </div>
+
+        <div className="col-span-3 space-y-2">
+          <DealsByCategory />
+        </div>
+
+        <div className="col-span-6 space-y-2">
+          <SalesDynamic />
+        </div>
       </div>
     </div>
   );

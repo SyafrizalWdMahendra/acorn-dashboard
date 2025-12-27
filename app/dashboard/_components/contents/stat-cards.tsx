@@ -10,13 +10,13 @@ export const StatCard = ({
 }: StatCardProps) => (
   <div
     className={`bg-white border rounded-xl h-max px-3 py-2 w-24 sm:w-28 flex flex-col items-center gap-3 ${
-      isHighlighted ? "border-rose-700" : "border-[#ececec]"
+      isHighlighted ? "border-rose-700" : "border-border"
     }`}
   >
     <span className="text-[10px] font-semibold">{title}</span>
     <div
       className={`rounded-full px-2.5 py-0.5 ${
-        isHighlighted ? "bg-rose-700" : "bg-[#c1c1c1]"
+        isHighlighted ? "bg-rose-700" : "bg-secondary"
       }`}
     >
       <span

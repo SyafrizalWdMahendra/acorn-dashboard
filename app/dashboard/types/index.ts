@@ -34,3 +34,14 @@ export type TreeGroupType = {
   title: string;
   sections: TreeSectionType[];
 };
+
+export interface PlatformItemProps {
+  icon: string;
+  name: string;
+  value: string;
+  percentage: number;
+}
+
+export interface PlatformBarItemProps extends PlatformItemProps {
+  height: string;
+}
