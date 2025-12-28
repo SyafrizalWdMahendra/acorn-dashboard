@@ -45,3 +45,9 @@ export interface PlatformItemProps {
 export interface PlatformBarItemProps extends PlatformItemProps {
   height: string;
 }
+
+export interface MonthlyPlatformProps {
+  revenue: string;
+  leads: number;
+  wl: string;
+}

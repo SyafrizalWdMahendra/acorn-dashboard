@@ -5,10 +5,14 @@ import { PlatformBarItem } from "../platform-item";
 
 export function DealsByCategory() {
   return (
-    <div className="bg-card rounded-xl p-3">
+    <div className="bg-card rounded-2xl p-3 h-full">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="h-8 px-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 px-2 hover:cursor-pointer"
+          >
             <BarChart2 className="text-sm" />
             <ChevronDown className="w-3 h-3 ml-1" />
           </Button>
@@ -16,7 +20,7 @@ export function DealsByCategory() {
         <Button
           variant="ghost"
           size="sm"
-          className="h-8 px-2 border border-border"
+          className="h-8 px-2 border border-border hover:cursor-pointer"
         >
           Filters
           <ListFilter className="w-4 h-4 mr-1" />
@@ -30,9 +34,7 @@ export function DealsByCategory() {
       </div>
 
       <div className="mt-2">
-        <p className="text-sm font-semibold text-muted-foreground">
-          Deals amount
-        </p>
+        <span className="text-sm text-muted-foreground">Deals Amount</span>
         <p className="text-xs font-semibold flex items-center gap-1 cursor-pointer">
           by referrer category <ChevronDown size={12} />
         </p>

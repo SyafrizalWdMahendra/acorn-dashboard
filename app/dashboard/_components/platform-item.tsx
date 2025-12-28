@@ -1,4 +1,8 @@
-import { PlatformBarItemProps, PlatformItemProps } from "../types";
+import {
+  MonthlyPlatformProps,
+  PlatformBarItemProps,
+  PlatformItemProps,
+} from "../types";
 
 const PlatformBarItem = ({ icon, height }: PlatformBarItemProps) => (
   <div
@@ -29,4 +33,37 @@ const PlatformItem = ({ icon, name, value, percentage }: PlatformItemProps) => (
   </div>
 );
 
-export { PlatformBarItem, PlatformItem };
+const MonthlyPlatformData = ({ revenue, leads, wl }: MonthlyPlatformProps) => {
+  return (
+    <div className="flex bg-rose-700 text-white rounded-tr-2xl rounded-bl-2xl w-max p-5 pt-6 pb-10 pr-8">
+      <div className="flex">
+        <span className="[writing-mode:vertical-lr] -rotate-180 m-auto text-start h-28.5 text-card text-xs p-0">
+          Average Monthly
+        </span>
+
+        <div className="flex flex-col pl-5 gap-3">
+          <div className="flex flex-col">
+            <span className="text-xs text-card">Revenue</span>
+            <span className="text-xs font-semibold">{revenue}</span>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xs text-card">Leads</span>
+            <div className="flex gap-1">
+              <span className="text-xs font-semibold">{leads}</span>
+              <span className="text-xs text-card">97/276</span>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xs text-card">W/L</span>
+            <div className="flex gap-1">
+              <span className="text-xs font-semibold">{wl}</span>
+              <span className="text-xs text-card">51/318</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { PlatformBarItem, PlatformItem, MonthlyPlatformData };

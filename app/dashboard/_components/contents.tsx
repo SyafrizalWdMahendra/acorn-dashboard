@@ -16,6 +16,7 @@ import StatBars from "./contents/stat-bars";
 import { PlatformList } from "./contents/platform-list";
 import { DealsByCategory } from "./contents/deals-by-category";
 import { SalesDynamic } from "./contents/sales-dynamic";
+import PlatformValue from "./contents/platform-value";
 
 export default function Contents() {
   return (
@@ -189,8 +190,12 @@ export default function Contents() {
           <DealsByCategory />
         </div>
 
-        <div className="col-span-6 space-y-2">
+        <div className="col-span-6 row-span-2 h-full">
           <SalesDynamic />
+        </div>
+
+        <div className="col-span-6 space-y-2">
+          <PlatformValue />
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const data = [
 
 export function SalesDynamic() {
   return (
-    <div className="bg-card rounded-xl p-4 ml-4">
+    <div className="bg-card rounded-2xl p-4 ml-5 h-full">
       <div className="flex items-center justify-between mb-2">
         <span className="text-sm text-muted-foreground">Sales dynamic</span>
         <TrendingUp className="w-4 h-4 text-muted-foreground" />

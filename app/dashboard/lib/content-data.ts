@@ -73,4 +73,6 @@ const platforms = [
   { icon: "🔍", name: "Google", value: "$37,028", percentage: 7 },
 ];
 
-export { users, stats, platformBars, platforms };
+const monthlyPlatformData = [{ revenue: `$18,552`, leads: 373, wl: `16%` }];
+
+export { users, stats, platformBars, platforms, monthlyPlatformData };

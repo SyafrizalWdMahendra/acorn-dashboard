@@ -5,10 +5,10 @@ import { platforms } from "../../lib/content-data";
 
 export function PlatformList() {
   return (
-    <div className="bg-card rounded-xl p-3">
+    <div className="bg-card rounded-2xl p-3">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="h-8 px-2">
+          <Button variant="ghost" size="sm" className="h-8 px-2 hover:cursor-pointer">
             <TextAlignStart className="text-sm" />
             <ChevronDown className="w-3 h-3 ml-1" />
           </Button>
@@ -16,7 +16,7 @@ export function PlatformList() {
         <Button
           variant="ghost"
           size="sm"
-          className="h-8 px-2 border border-border"
+          className="h-8 px-2 border border-border hover:cursor-pointer"
         >
           Filters
           <ListFilter className="w-4 h-4 mr-1" />
