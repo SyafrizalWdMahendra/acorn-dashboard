@@ -1,7 +1,12 @@
 import { TreeItemType } from "../../types";
 
-export const TreeItem = ({ label, badge }: TreeItemType) => (
-  <div className="flex items-center">
+export const TreeItem = ({ label, badge, index = 0 }: TreeItemType) => (
+  <div
+    className="flex items-center animate-slide-stagger opacity-0"
+    style={{
+      animationDelay: `${index * 50}ms`,
+    }}
+  >
     <div className="w-2.5 h-0 border-t border-gray-300 shrink-0 mr-2" />
     <div className="flex justify-between w-full items-center">
       <span className="text-sm font-semibold whitespace-nowrap mt-0.5">

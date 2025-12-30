@@ -1,3 +1,4 @@
+"use client";
 import {
   ChevronDown,
   ChevronsUp,
@@ -17,8 +18,10 @@ import { PlatformList } from "./contents/platform-list";
 import { DealsByCategory } from "./contents/deals-by-category";
 import { SalesDynamic } from "./contents/sales-dynamic";
 import PlatformValue from "./contents/platform-value";
+import { useState } from "react";
 
 export default function Contents() {
+  const [isTimeframeActive, setIsTimeframeActive] = useState(false);
   return (
     <div className="bg-white w-full rounded-3xl h-dvh overflow-y-scroll">
       {/* Row 1 */}
@@ -49,7 +52,20 @@ export default function Contents() {
         </span>
         <div className="flex gap-4 items-center">
           <div className="flex gap-2 items-center">
-            <ToggleRight />
+            <button
+              onClick={() => setIsTimeframeActive(!isTimeframeActive)}
+              className={`
+              flex items-center w-10.5 h-6 rounded-full transition-colors duration-200 ease-in-out
+              ${isTimeframeActive ? "bg-black" : "bg-gray-300"}
+            `}
+            >
+              <span
+                className={`
+                w-4.5 h-4.5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out
+                ${isTimeframeActive ? "translate-x-5" : "translate-x-1"}
+              `}
+              />
+            </button>
             <span className="font-semibold text-sm">Timeframe</span>
           </div>
           <div className="flex bg-[#f2f2f2] text-black px-4 py-1 rounded-full text-sm items-center gap-2">

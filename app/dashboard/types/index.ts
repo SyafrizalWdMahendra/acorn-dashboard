@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, ShoppingBag, ShoppingBagIcon } from "lucide-react";
 
 export type UserBadgeProps = {
   name: string;
@@ -21,6 +21,7 @@ export type StatCardProps = {
 export type TreeItemType = {
   label: string;
   badge?: string | number;
+  index?: number;
 };
 
 export type TreeSectionType = {
@@ -47,7 +48,11 @@ export interface PlatformBarItemProps extends PlatformItemProps {
 }
 
 export interface MonthlyPlatformProps {
-  revenue: string;
-  leads: number;
-  wl: string;
+  name?: string;
+  value?: string;
+  height?: string;
 }
+
+export const IconMap: Record<string, any> = {
+  Shopping: ShoppingBagIcon,
+};

@@ -27,7 +27,7 @@ export function DealsByCategory() {
         </Button>
       </div>
 
-      <div className="flex items-end justify-evenly mt-7 space-x-0.5">
+      <div className="flex items-end justify-between mt-7 gap-1">
         {platformBars.map((platform) => (
           <PlatformBarItem key={platform.name} {...platform} />
         ))}

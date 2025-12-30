@@ -30,35 +30,35 @@ const stats = [
 
 const platformBars = [
   {
-    icon: "🅱️",
+    icon: "behance-icon.png",
     name: "Behance",
     value: "$89,935",
     percentage: 11,
     height: "h-24",
   },
   {
-    icon: "🏀",
+    icon: "dribble-icon.webp",
     name: "Dribbble",
     value: "$227,459",
     percentage: 43,
     height: "h-32",
   },
   {
-    icon: "🔍",
+    icon: "google-icon.webp",
     name: "Google",
     value: "$37,028",
     percentage: 7,
     height: "h-20",
   },
   {
-    icon: "📷",
+    icon: "instagram-icon.png",
     name: "Instagram",
     value: "$142,823",
     percentage: 27,
     height: "h-14",
   },
   {
-    icon: "👜",
+    icon: "Shopping",
     name: "Shopping",
     value: "$0",
     percentage: 30,
@@ -67,12 +67,73 @@ const platformBars = [
 ];
 
 const platforms = [
-  { icon: "🏀", name: "Dribbble", value: "$227,459", percentage: 43 },
-  { icon: "📷", name: "Instagram", value: "$142,823", percentage: 27 },
-  { icon: "🅱️", name: "Behance", value: "$89,935", percentage: 11 },
-  { icon: "🔍", name: "Google", value: "$37,028", percentage: 7 },
+  {
+    icon: "dribble-icon.webp",
+    name: "Dribbble",
+    value: "$227,459",
+    percentage: 43,
+  },
+  {
+    icon: "instagram-icon.png",
+    name: "Instagram",
+    value: "$142,823",
+    percentage: 27,
+  },
+  {
+    icon: "behance-icon.png",
+    name: "Behance",
+    value: "$89,935",
+    percentage: 11,
+  },
+  { icon: "google-icon.webp", name: "Google", value: "$37,028", percentage: 7 },
 ];
 
-const monthlyPlatformData = [{ revenue: `$18,552`, leads: 373, wl: `16%` }];
+const monthlyPlatformData = [
+  {
+    name: "Behance",
+    value: "$6,901",
+    height: "h-17",
+  },
+  {
+    name: "Dribbble",
+    value: "$227,459",
+    height: "h-12",
+  },
+  {
+    name: "Google",
+    value: "$37,028",
+    height: "h-5.5",
+  },
+  {
+    name: "Instagram",
+    value: "$11,035",
+    height: "h-27.5",
+  },
+  {
+    name: "Shopping",
+    value: "$0",
+    height: "h-19.5",
+  },
+  {
+    name: "asd",
+    value: "$227,459",
+    height: "h-12",
+  },
+  {
+    name: "bbbb",
+    value: "$9,288",
+    height: "h-21.5",
+  },
+  {
+    name: "njn",
+    value: "$142,823",
+    height: "h-13",
+  },
+  {
+    name: "kjn",
+    value: "$0",
+    height: "h-18.5",
+  },
+];
 
 export { users, stats, platformBars, platforms, monthlyPlatformData };
